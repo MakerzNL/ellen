@@ -177,7 +177,7 @@ body.has-logo .brand .logo{font-size:34px}
 
 @media (max-width:880px){
   .nav-toggle{display:inline-flex;align-items:center;gap:.6em;font-family:var(--sans);font-weight:700;font-size:.76rem;letter-spacing:.18em;text-transform:uppercase;background:none;border:0;color:var(--ink);cursor:pointer}
-  .nav{position:fixed;inset:0;background:var(--olive);color:var(--bg);flex-direction:column;justify-content:center;align-items:center;gap:1.5rem;transform:translateY(-100%);transition:transform .6s var(--ease);z-index:90}
+  .nav{position:fixed;inset:0;width:100%;height:100dvh;background:var(--olive);color:var(--bg);flex-direction:column;justify-content:center;align-items:center;gap:1.5rem;overflow:hidden;transform:translateY(-101%);transition:transform .6s var(--ease);z-index:90}
   .nav.open{transform:none}
   .nav a{font-size:1.6rem;text-transform:none;letter-spacing:0;font-family:var(--serif);font-weight:400;color:var(--bg)}
   .nav a::after{background:var(--bg);height:1px}
@@ -229,7 +229,16 @@ body.has-logo .brand .logo{font-size:34px}
 .f-d{grid-column:span 5;aspect-ratio:3/4}
 .folio.even .f-a{grid-column:span 7;aspect-ratio:7/5}
 .folio.even .f-b{grid-column:span 5;aspect-ratio:3/4}
-@media (max-width:760px){.folio>*{grid-column:1/-1 !important;aspect-ratio:4/3 !important}}
+@media (max-width:760px){
+  .folio>*{grid-column:1/-1 !important;aspect-ratio:4/3 !important}
+  /* full-bleed images on mobile — no cream margins beside photos */
+  .folio{margin-inline:calc(-1 * var(--gut));gap:8px}
+  .folio figure{border-radius:0}
+}
+@media (max-width:820px){
+  .hero__media,.media-frame{margin-inline:calc(-1 * var(--gut));border-radius:0}
+  .media-frame{aspect-ratio:4/3}
+}
 .cap{font-family:var(--sans);font-size:.76rem;letter-spacing:.16em;text-transform:uppercase;color:var(--ink-soft);margin-top:.9rem}
 
 /* quote */
