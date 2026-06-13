@@ -1,0 +1,13 @@
+# Local dev / tooling
+.claude/
+serve.ps1
+resize.ps1
+contact-sheet.html
+
+# Large original photos (web-optimised versions live in img/)
+img_full/
+
+# OS / misc
+.DS_Store
+Thumbs.db
+*.log
