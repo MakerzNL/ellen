@@ -14,9 +14,10 @@
   --ink:#3B3B3B;         /* tekstgrijs (never pure black) */
   --ink-soft:#6E685E;    /* muted body text */
 
-  --olive:#6C6E36;       /* THE pop colour — logo, accents, buttons */
-  --olive-deep:#565827;  /* darker olive for hover/contrast */
-  --olive-soft:#A7A878;  /* light olive for subtle accents on dark */
+  /* THE pop colour = terracotta (var names kept as --olive* internally) */
+  --olive:#C2613D;       /* terracotta — logo, accents, buttons, dark sections */
+  --olive-deep:#A24F2E;  /* darker terracotta for hover/contrast */
+  --olive-soft:#E7B49B;  /* light clay for subtle accents on dark */
 
   --line:rgba(59,59,59,.14);
   --line-light:rgba(247,244,238,.24);
