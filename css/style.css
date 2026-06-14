@@ -132,11 +132,11 @@ p{margin:0 0 1.1em}
   display:flex;align-items:center;justify-content:center;
   font-family:var(--script);color:var(--bg);            /* white-ish logo on olive */
   font-size:clamp(4.6rem,20vw,18rem);line-height:.8;
-  opacity:0;transform:scale(.74);filter:blur(18px);       /* comes from further away + out of focus */
-  animation:introFade 2.2s var(--ease) .3s forwards;       /* soft fade-in, like Nicole Fuller */
+  opacity:0;transform:scale(.72);filter:blur(40px);       /* comes from further away + strongly out of focus */
+  animation:introFade 2.3s var(--ease) .3s forwards;       /* soft fade-in, like Nicole Fuller */
 }
 .intro__half--r .intro__logo{left:-50vw}                  /* shift so it stays viewport-centred */
-@keyframes introFade{60%{filter:blur(2px)}to{opacity:1;transform:none;filter:blur(0)}}
+@keyframes introFade{45%{opacity:.55;filter:blur(16px)}75%{filter:blur(5px)}to{opacity:1;transform:none;filter:blur(0)}}
 
 body.has-logo .intro__logo{
   font-size:0;color:transparent;background-color:var(--bg);
@@ -144,8 +144,8 @@ body.has-logo .intro__logo{
           mask:url(../assets/logo-Ellen.png) no-repeat center / min(58vw,700px) auto;
 }
 
-.intro__tag{position:absolute;bottom:8vh;left:0;right:0;text-align:center;z-index:2;font-family:var(--sans);font-weight:600;letter-spacing:.34em;text-transform:uppercase;font-size:.7rem;color:var(--olive-soft);opacity:0;animation:tagInOut 1.55s ease .9s forwards}
-@keyframes tagInOut{0%{opacity:0}20%{opacity:1}68%{opacity:1}100%{opacity:0}}
+.intro__tag{position:absolute;bottom:8vh;left:0;right:0;text-align:center;z-index:2;font-family:var(--sans);font-weight:600;letter-spacing:.34em;text-transform:uppercase;font-size:.7rem;color:var(--olive-soft);opacity:0;animation:fadeIn .8s ease .9s forwards;transition:opacity .4s var(--ease)}
+.intro.open .intro__tag{opacity:0}
 @keyframes fadeIn{to{opacity:1}}
 
 /* reveal-on-scroll */
