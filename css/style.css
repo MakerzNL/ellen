@@ -14,10 +14,10 @@
   --ink:#3B3B3B;         /* tekstgrijs (never pure black) */
   --ink-soft:#6E685E;    /* muted body text */
 
-  /* THE pop colour = terracotta (var names kept as --olive* internally) */
-  --olive:#C2613D;       /* terracotta — logo, accents, buttons, dark sections */
-  --olive-deep:#A24F2E;  /* darker terracotta for hover/contrast */
-  --olive-soft:#E7B49B;  /* light clay for subtle accents on dark */
+  /* THE pop/support colour (var names kept as --olive* internally) */
+  --olive:#D93D36;       /* support red — logo, accents, buttons, dark sections */
+  --olive-deep:#B82E28;  /* darker red for hover/contrast */
+  --olive-soft:#F0A59F;  /* light tint for subtle accents on dark */
 
   --line:rgba(59,59,59,.14);
   --line-light:rgba(247,244,238,.24);
@@ -189,8 +189,10 @@ body.has-logo .brand .logo{font-size:34px}
 /* ============================================================
    HERO
    ============================================================ */
-.hero{min-height:100svh;display:flex;align-items:center;padding-top:96px;position:relative}
-.hero__grid{display:grid;grid-template-columns:1.05fr .95fr;gap:clamp(30px,5vw,90px);align-items:center;width:100%}
+.hero{min-height:100svh;display:flex;align-items:center;padding-top:96px;position:relative;overflow:hidden}
+/* giant, very faint "E" from the logo as a background watermark */
+.hero__mark{position:absolute;z-index:0;pointer-events:none;top:48%;left:46%;transform:translate(-50%,-50%);height:132vh;aspect-ratio:.753;opacity:.09;background-color:var(--olive);-webkit-mask:url(../assets/logo-E.png) no-repeat center / contain;mask:url(../assets/logo-E.png) no-repeat center / contain}
+.hero__grid{position:relative;z-index:1;display:grid;grid-template-columns:1.05fr .95fr;gap:clamp(30px,5vw,90px);align-items:center;width:100%}
 .hero__title{font-size:clamp(2.8rem,8vw,7rem);line-height:.99}
 .hero__title .small{display:block;font-size:.3em;letter-spacing:.01em;color:var(--ink-soft);margin-top:.7em;line-height:1.4;font-family:var(--sans);font-weight:400;max-width:34ch}
 .hero__media{position:relative;aspect-ratio:4/5;border-radius:6px;overflow:hidden;background:var(--greige)}
