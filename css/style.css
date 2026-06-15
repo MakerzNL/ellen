@@ -292,8 +292,8 @@ body.has-logo .brand .logo{font-size:34px}
    FOOTER — olive, never black
    ============================================================ */
 .site-foot{background:var(--olive);color:var(--bg);padding-block:clamp(56px,7vw,100px)}
-.foot-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:40px;align-items:start}
-@media (max-width:760px){.foot-grid{grid-template-columns:1fr 1fr;gap:30px 24px}.foot-grid>:first-child{grid-column:1/-1}}
+.foot-grid{display:grid;grid-template-columns:1.5fr 1fr;gap:40px;align-items:start}
+@media (max-width:760px){.foot-grid{grid-template-columns:1fr;gap:30px}}
 .site-foot .logo{display:block;font-size:4.6rem;color:var(--bg);margin-bottom:.6rem}
 body.has-logo .site-foot .logo{font-size:54px;margin-bottom:1.2rem;background-color:var(--bg)}
 .site-foot a:hover{color:var(--olive-soft)}
