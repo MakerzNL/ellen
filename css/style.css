@@ -6,8 +6,8 @@
    ============================================================ */
 
 @font-face{
-  font-family:"Wasted Vindey";
-  src:url("../assets/fonts/Wasted-Vindey.ttf") format("truetype");
+  font-family:"Ellen Font";
+  src:url("../assets/fonts/ellen-font.ttf") format("truetype");
   font-weight:400;font-style:normal;font-display:swap;
 }
 
@@ -29,7 +29,7 @@
   --line-light:rgba(247,244,238,.24);
 
   --serif:"Playfair Display", Georgia, "Times New Roman", serif;
-  --title:"Wasted Vindey", "Playfair Display", Georgia, serif;
+  --title:"Ellen Font", "Playfair Display", Georgia, serif;
   --sans:"Manrope", system-ui, -apple-system, "Segoe UI", sans-serif;
   --script:"Allura", "Pinyon Script", cursive;
 
